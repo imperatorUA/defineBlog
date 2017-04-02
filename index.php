@@ -31,11 +31,11 @@
 
 					$sql = "
 						SELECT 
-						  title, text, date, DATE_FORMAT(n.date,'%d/%m/%Y') AS date_ymd, DATE_FORMAT(n.date,'%h:%m') AS date_time
+						  title, text, date_news, DATE_FORMAT(n.date_news,'%d/%m/%Y') AS date_ymd, DATE_FORMAT(n.date_news,'%H:%i') AS date_time
 						FROM 
 						  news n 
 						ORDER BY 
-							n.date DESC
+							n.date_news DESC
 					";
 
 					$res = $mysqli->query( $sql );
